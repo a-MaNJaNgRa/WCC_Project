@@ -1,0 +1,65 @@
+//Front end queries
+node -v
+npm -v
+//Backend queries
+Create a new project folder and navigate to it:
+
+bash
+mkdir livestock-backend
+cd livestock-backend
+
+Initialize a new Node.js project:
+
+bash
+npm init -y
+
+Install required dependencies:
+
+bash
+npm install express cors body-parser
+
+Run the server:
+
+bash
+
+node server.js
+
+
+Restart the server (if needed):
+Press CTRL+C to stop the server and re-run:
+
+bash
+node server.js
+//FETCHING
+Fetch all livestock (GET):
+
+http
+
+GET http://localhost:3000/api/livestock
+Add new livestock (POST):
+
+http
+
+POST http://localhost:3000/api/livestock
+Content-Type: application/json
+{
+    "name": "Bella",
+    "type": "Cow",
+    "age": 3
+}
+Delete livestock by ID (DELETE):
+
+http
+
+DELETE http://localhost:3000/api/livestock/:id
+Update livestock by ID (PUT):
+
+http
+
+PUT http://localhost:3000/api/livestock/:id
+Content-Type: application/json
+{
+    "name": "Daisy",
+    "type": "Goat",
+    "age": 4
+}
